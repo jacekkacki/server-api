@@ -12,10 +12,11 @@ Or
 
 ## Usage
 
-Run HTTP server with Handlebars write `yarn start` or `npm start`.
+Run HTTP server write `yarn start` or `npm start`.
 Starting the server with automatic refreshing option write `yarn watch` or `npm watch`.
 
 If you want to test the server, use the `postman` program.
+All data is displayed in `json` format.
 
 When you select get method:
   - `http://localhost:8000/testimonials/` - display all data from db,
