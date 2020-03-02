@@ -1,6 +1,6 @@
 # Simple express server
 
-This project will create simple local server HTTP with .
+This project will create simple local server HTTP with get, post, put and delete methods.
 
 ## Install
 
@@ -31,7 +31,7 @@ When you select get method:
   When you select delete method:
   - `http://localhost:8000/testimonials/:id` - removing the selected item from the db,
 
-  - Pages not found - error page.
+  Pages not found - error page.
   
 
 
