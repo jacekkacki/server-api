@@ -10,12 +10,12 @@ router.route('/testimonials').get((req, res) => {
 });
 
 router.route('/testimonials/random').get((req, res) => {
-  let random = Math.floor(Math.random()*(db.length));
+  let random = Math.floor(Math.random()*(db.testimonials.length));
   res.json(db.testimonials[random]);
 });
 
 router.route('/testimonials/:id').get((req, res) => {
-  res.json(db.testimonials[`${req.params.id}`-1]);
+  res.json(db.testimonials[req.params.id-1]);
 });
 
 router.route('/testimonials').post((req, res) => {
@@ -29,12 +29,12 @@ router.route('/testimonials').post((req, res) => {
 });
 
 router.route('/testimonials/:id').put((req, res) => {
-  db.testimonials = db.testimonials.map(data => data.id == `${req.params.id}`? {...data, author: req.body.author, text: 'Lorem Ipsum' }: data );
+  db.testimonials = db.testimonials.map(data => data.id == req.params.id? {...data, author: req.body.author, text: 'Lorem Ipsum' }: data );
   res.json(msg);
 });
 
 router.route('/testimonials/:id').delete((req, res) => {
-  db.testimonials.splice(`${req.params.id}`-1, 1);
+  db.testimonials.splice(req.params.id - 1, 1);
   res.json(msg);
 });
 

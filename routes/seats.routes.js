@@ -11,7 +11,7 @@ router.route('/seats').get((req, res) => {
 });
 
 router.route('/seats/:id').get((req, res) => {
-  res.json(db.seats[`${req.params.id}`-1]);
+  res.json(db.seats[req.params.id - 1]);
 });
 
 router.route('/seats').post((req, res) => {
@@ -28,14 +28,14 @@ router.route('/seats').post((req, res) => {
 
 router.route('/seats/:id').put((req, res) => {
   db.seats = db.seats.map(data =>
-     data.id == `${req.params.id}`?
+     data.id == req.params.id?
      {...data, day: req.body.day, seat: req.body.seat,
      client: req.body.client, email: req.body.email}: data );
   res.json(msg);
 });
 
 router.route('/seats/:id').delete((req, res) => {
-  db.seats.splice(`${req.params.id}`-1, 1);
+  db.seats.splice(req.params.id - 1, 1);
   res.json(msg);
 });
 
