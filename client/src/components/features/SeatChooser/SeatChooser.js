@@ -10,7 +10,7 @@ class SeatChooser extends React.Component {
     loadSeats();
 
     this.refresh = setInterval(() => 
-    loadSeats(), 2000);
+    loadSeats(), 120000);
   }
 
   isTaken = (seatId) => {
