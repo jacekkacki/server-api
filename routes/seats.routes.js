@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require('../db/db');
 const uuidv1 = require('uuid/v1');
 
-
 const msg = { message: 'OK' };
 
 router.route('/seats').get((req, res) => {
@@ -36,7 +35,7 @@ router.route('/seats/:id').put((req, res) => {
      {...data, day: req.body.day, seat: req.body.seat,
      client: req.body.client, email: req.body.email}: data );
   res.json(msg);
-});
+})
 
 router.route('/seats/:id').delete((req, res) => {
   db.seats.splice(req.params.id - 1, 1);
