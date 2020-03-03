@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "build": "cd client && yarn install && yarn build"
   },
   "dependencies": {
     "cors": "^2.8.5",
