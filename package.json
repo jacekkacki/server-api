@@ -2,6 +2,7 @@
   "name": "server-api",
   "version": "1.0.0",
   "main": "server.js",
+  "author": "Jacek Kącki",
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
